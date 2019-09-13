@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+
+        html {
+            /* font: normal 90% Helvetica, Arial, sans-serif; */
+
+            width: 100%;
+            height: 10px;
+
+            font-size: 0.9rem;
+
+            /* font: normal 87.5% Helvetica, Arial, sans-serif; */
+        }
+
+        a {
+            margin-left: 1%;
+
+            /* line-height: 0px; */
+            color: black;
+            text-decoration: none;
+        }
+
+
+        /* #flow span {
+            color: red;
+            font-size: 16px;
+        } */
+    </style>
+
+    <script type="text/javascript">
+        var shownPieces = [""];
+        var index = 0;
+        var flow = undefined;
+        var flowOnce = function () {
+            // alert("adfa");
+            if (index >= shownPieces.length) {
+                index = 0;
+            }
+            if (index == 0) {
+                shownPieces.sort(function () {
+                    return 0.5 - Math.random();
+                });
+            }
+            flow.innerText = shownPieces[index];
+            index++;
+        }
+        var startFlow = function () {
+            // alert("adfa");
+            shownPieces = ["dism拒绝访问的分析", "反编译chm", "我的电脑出现无效U盘图标的解决"];
+            index = 0;
+            // flow = document.getElementById("flow").children[0];
+            flow = document.getElementById("flow");
+            // alert(flow.innerText);
+            // flow.href="dailyPieces/index.html";
+            flowOnce();
+            setInterval("flowOnce()", 3000);
+            // alert(flow.color);
+        }
+    </script>
+
+</head>
+
+<body onload="startFlow()">
+    <!-- <a id="flow" href="dailyPieces/index.html" target="_top"><span></span></a> -->
+    <a id="flow" href="dailyPieces/index.html" target="_top"></a>
+    <!-- <a id="flow" href="" target="_top">qwerqwrqw</a> -->
+</body>
+
+</html>
