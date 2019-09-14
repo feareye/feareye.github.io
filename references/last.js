@@ -10,7 +10,7 @@ var setStatic = function () {
 }
 setStatic();
 
-window.onload = function() {
+window.onload = function () {
     // alert(hscreen);
 
 
@@ -59,13 +59,7 @@ var getObjs = function () {
     vtextPic1a = document.getElementById("textPic1a");
 }
 
-var getNewObjs = function () {
-    vleftContent0 = document.getElementById("leftContent0");
-    vrightContent0 = document.getElementById("rightContent0");
-    vleftContent = document.getElementById("leftContent");
-    vrightContent = document.getElementById("rightContent");
 
-}
 
 // var wavailWidth = window.screen.availWidth;
 // var havailWidth = window.screen.availHeight;
@@ -76,22 +70,33 @@ var getNewObjs = function () {
 // // var hclientHeight = document.body.clientHeight;
 // // var wJQwidth = $(window).width();
 // // var hJQheight = $(window).height();
-var initPhone = function () {
-    //增删节点
-    // alert(vtr_content.innerHTML);
-    // vtr_content.innerHTML = "<td class='contentGap'></td><td id='leftContent0'><div id='leftContent' class='phone_leftContent'> 圆角1</div></td><td id='betweenContent'></td><td id='rightContent0'><div id='rightContent' class='phone_rightContent'>圆角2</div></td><td class='contentGap'></td>";
-    vtr_content.innerHTML = "<td class='contentGap'></td><td id='leftContent0'><div id='leftContent' class='phone_leftContent'><div id='leftText0'><span id='leftText'>小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈，小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈</span></div></div></td><td id='betweenContent'></td><td id='rightContent0'><div id='rightContent' class='phone_rightContent'><div id='rightText0'><span id='rightText'>小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈</span></div></div></td><td class='contentGap'></td>";
 
-    //获取新节点
-    getNewObjs();
+// var getNewObjs = function () {//discarded
+//     vleftContent0 = document.getElementById("leftContent0");
+//     vrightContent0 = document.getElementById("rightContent0");
+//     vleftContent = document.getElementById("leftContent");
+//     vrightContent = document.getElementById("rightContent");
+// }
+var initPhone = function () {
+    //discarded 增删节点 
+    // vtr_content.innerHTML = "<td class='contentGap'></td><td id='leftContent0'><div id='leftContent' class='phone_leftContent'><div id='leftText0'><span id='leftText'>小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈，小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈</span></div></div></td><td id='betweenContent'></td><td id='rightContent0'><div id='rightContent' class='phone_rightContent'><div id='rightText0'><span id='rightText'>小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈</span></div></div></td><td class='contentGap'></td>";
+
+    //discarded 获取新节点
+    // getNewObjs();
 
     //背景及背景续接图初始化
     // vbody.className = "phone_body";
     // vbackground.className = "phone_background"
 
+    if (wscreen > hscreen) {
+        var preWscreen = wscreen;
+        wscreen = hscreen;
+        hscreen = preWscreen;
+    }
     //移动端特殊设置：放宽对主元素区域的压缩限制，允许元素可控范围内压缩变形
-    // vbackground.style.minHeight = 280 + "px";
-    vbackground.style.minHeight = (hscreen * 70 / 100) + "px";
+    // vbackground.style.minHeight = (hscreen * 65 / 100) + "px";
+    vbackground.style.height = hscreen + "px";
+    vbackground.style.minHeight = hscreen + "px";
     //移动端特殊设置：元素限制
 
     //图片
@@ -106,20 +111,30 @@ var initPhone = function () {
         //     alert("已为您调整合适的字体大小");
         //     vhtml.style.fontSize = ((wscreen - 300) / 2800 + 0.875) + "rem";
         // } else
-        if (wscreen < 1200) {
-            vhtml.style.fontSize = ((wscreen - 300) / 6000 + 0.85) + "rem";
+        if (wscreen < 980) {
+            vhtml.style.fontSize = ((wscreen - 300) / 4500 + 0.85) + "rem";
             //alert("已为您调整合适的字体大小");
         }
 
     //移动端特殊设置：元素折行,定宽
-    // vleftContent.className = "phone_leftContent";
-    // vrightContent.className = "phone_rightContent";
+    vleftContent.className = "phone_leftContent";
+    vrightContent.className = "phone_rightContent";
 
-    var weachContent = wscreen * 40 / 100;
-    // alert(vleftContent.innerHTML);
+    //discarded
+    // var weachContent = wscreen * 40 / 100;
+    // vleftContent.style.width = weachContent + "px";
+    // vrightContent.style.width = weachContent + "px";
+
+    var weachContent = wscreen * 0.24 * 1.6 * hscreen / wscreen * 0.8;
+    var heachContent = hscreen * 0.24 * 0.8;
+    var hblank = hscreen * 0.24 * 0.2;
+
     vleftContent.style.width = weachContent + "px";
     vrightContent.style.width = weachContent + "px";
+    vleftContent.style.height = heachContent + "px";
+    vrightContent.style.height = heachContent + "px";
 
+    vleftContent.style.bottom = hblank + "px";
     //此处修改图片路径
 
 
@@ -132,8 +147,14 @@ var initStyles = function () {
 
 
     // 移动端(排除平板)备用图片及字体(0.875~1)方案
-    if (wscreen - hscreen < 0 || wscreen < 980) {
+    var isPhone1 = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone|webOS)/i);
+    var isPhone2 = navigator.userAgent.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince|mobile)/i);
+    var isOtherPhone = (wscreen < hscreen) && (wscreen < 650);
+    var isUnknownPhone = (hscreen < 450) || (wscreen < 450);
+    if (isPhone1 || isPhone2 || isOtherPhone || isUnknownPhone) {
+        // if (wscreen - hscreen < 0 && wscreen < 980) {
         // if (1) {
+        alert(wscreen + ", " + hscreen + " [phone]" + navigator.userAgent);
         initPhone();
 
         return;
@@ -161,15 +182,16 @@ var initStyles = function () {
 
 
     //pc端特殊设置：限定主元素区域的最小高度，防止拖动窗口使元素压缩变形
+    vbackground.style.height = hscreen + "px";
     vbackground.style.minHeight = hscreen + "px";
     //pc端特殊设置：元素限制
     var weachContent = wscreen * 0.24;
-    // var heachContent = hscreen * 0.24;
+    var heachContent = hscreen * 0.24;
 
     vleftContent.style.width = weachContent + "px";
     vrightContent.style.width = weachContent + "px";
-    // vleftContent.style.height = heachContent + "px";
-    // vrightContent.style.height = heachContent + "px";
+    vleftContent.style.height = heachContent + "px";
+    vrightContent.style.height = heachContent + "px";
     // vleftContent.style.top =(hscreen * 58 / 100) + "px";
     // vrightContent.style.top =(hscreen * 58 / 100) + "px";
 
@@ -207,5 +229,5 @@ var showBody = function () {
     // $(vbody).removeClass("hide");
     // alert(234);
     // vbody.className ="pc_body show";
-    
+
 }
