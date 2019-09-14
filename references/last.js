@@ -10,7 +10,7 @@ var setStatic = function () {
 }
 setStatic();
 
-window.onload = () => {
+window.onload = function() {
     // alert(hscreen);
 
 
