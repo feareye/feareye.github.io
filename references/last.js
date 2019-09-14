@@ -11,7 +11,7 @@ var setStatic = function () {
 setStatic();
 
 window.onload = () => {
-    alert(hscreen);
+    // alert(hscreen);
 
 
     getObjs();
@@ -205,7 +205,7 @@ var showBody = function () {
     // vbody.style.display = "block";
     // vbody.style.visibility="visible";
     // $(vbody).removeClass("hide");
-    alert(234);
+    // alert(234);
     // vbody.className ="pc_body show";
     
 }

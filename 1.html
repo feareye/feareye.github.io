@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            /* font-size: 16px; */
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+        }
+
+        tr {
+            width: 100%;
+            height: 20%;
+        }
+
+        td {
+            border: solid red 3px;
+        }
+        #content{
+            position: relative;
+        }
+        #left,#right{
+            
+            height: 100%;
+            width: 150px;
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+        }
+        #left {
+            background-color: blue;
+            /* float: left; */
+            left: 15%;
+            
+        }
+
+        #right {
+            background-color: red;
+            /* float: right; */
+            right: 15%;
+        }
+    </style>
+
+    <script>
+        // var vbackground = document.getElementById("background");
+        // vbackground.style.backgroundImage = "url(../skins/bg_1.png)";
+        // vbackground.style.backgroundPositionX = "center";
+        // vbackground.style.backgroundPositionY = "center";
+        // vbackground.class;
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="content" colspan="2">
+                <div id="left">
+                    sdfa
+                </div>
+                <div id="right">
+                    fda
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
