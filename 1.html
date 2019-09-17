@@ -18,74 +18,79 @@
             /* font-size: 16px; */
         }
 
-        table {
-            width: 100%;
-            height: 100%;
-        }
+        /* object { */
+        /* height: 300px; */
+        /* background-color: aqua; */
+        /* } */
 
-        tr {
-            width: 100%;
-            height: 20%;
-        }
-
-        td {
-            border: solid red 3px;
-        }
-        #content{
-            position: relative;
-        }
-        #left,#right{
-            
-            height: 100%;
-            width: 150px;
-            display: inline-block;
-            position: absolute;
-            top: 0px;
-        }
-        #left {
-            background-color: blue;
-            /* float: left; */
-            left: 15%;
-            
-        }
-
-        #right {
-            background-color: red;
-            /* float: right; */
-            right: 15%;
+        audio {
+            /* display: inline-block; */
+            width: 300px;
+            height: 54px;
+            background-color: aqua;
+            background-image: 'skins/broadcast.png'
         }
     </style>
 
+    <script src="references/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script>
-        // var vbackground = document.getElementById("background");
-        // vbackground.style.backgroundImage = "url(../skins/bg_1.png)";
-        // vbackground.style.backgroundPositionX = "center";
-        // vbackground.style.backgroundPositionY = "center";
-        // vbackground.class;
+        // $(function () {
+        //     $("#div1").load("http://feareye.github.io/mainUI/flow.html");
+        // });
+        // window.onload = function () {
+        //     alert(24);
+        //     $("#div1").html("Hello <b>world</b>!");
+        //     $("#div1").load("baidu11.html");
+
+        // };
+    </script>
+
+    <script>
+        // function rbf() {
+        //     var audio = document.getElementById('music1');
+        //     audio.currentTime = 0;
+        // }
+
+        function bf(id) {
+            // if(id != 'music1') {
+
+            // }
+
+            var audio = document.getElementById(id);
+            if (audio !== null) {
+                //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+                // alert(audio.paused);
+                if (audio.paused) {
+                    audio.play(); //audio.play();// 这个就是播放  
+                } else {
+                    audio.pause(); // 这个就是暂停
+                }
+            }
+        }
     </script>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="content" colspan="2">
-                <div id="left">
-                    sdfa
-                </div>
-                <div id="right">
-                    fda
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+    <!-- <div id="div1">
+    </div> -->
+    <!-- <object data="https://user.qzone.qq.com/314839661/334" width="600" height="400">
+        <embed src="https://user.qzone.qq.com/314839661/334" width="600" height="400"> </embed>
+        Error: Embedded data could not be displayed.
+    </object> -->
+
+    <!-- <audio id="music1" src="https://mytrip.res.netease.com/pc/gw/20171214191645/data/music.mp3" loop=""></audio> -->
+
+    <audio id="music1" loop="" controls>
+        <source src="https://mytrip.res.netease.com/pc/gw/20171214191645/data/music.mp3">
+        <!-- <embed id="music2" src="https://mytrip.res.netease.com/pc/gw/20171214191645/data/music.mp3"> -->
+    </audio>
+
+    <span id="bf" onclick="bf('music1');">播放/暂停</span>
+    
+    <!-- <span id="bf" onclick="rbf();">重新播放</span> -->
+
+
+    <!-- <iframe src="https://user.qzone.qq.com/314839661/334" frameborder="0"></iframe> -->
 </body>
 
 </html>

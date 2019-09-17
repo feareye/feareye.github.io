@@ -2,22 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta name="from" content="git:MYTRIP/mytrip-gw-17v2-20171214">
+    <!-- <meta name="from" content="git:xxx/xxx-gw-17v2-20171214"> -->
     <meta name="applicable-device" content="PC">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
-    <link href="https://nie.res.netease.com" rel="dns-prefetch">
-    <!-- <link href="https://nie.res.netease.com/comm/js/nie/util/alertBox/css/alertBox.css" rel="stylesheet" type="text/css" media="all"> -->
-    <!-- jquery mix NIE (最新版本）-->
-
-    <!-- <script src="https://nie.res.netease.com/comm/js/jquery(mixNIE).1.11.js" charset="utf-8"></script>
-    <script src="https://mytrip.res.netease.com/pc/gw/20171214191645/js/autoComplete_9e60f6d.js" charset="utf-8"></script>
-    <script src="https://mytrip.res.netease.com/pc/gw/20171214191645/js/common_e61ab4f.js" charset="utf-8"></script>
-    <script src="https://mytrip.res.netease.com/pc/gw/20171214191645/js/index_1ab4971.js" charset="utf-8"></script>
-    <script src="https://mytrip.res.netease.com/pc/gw/20171214191645/js/order_8be7272.js" charset="utf-8"></script>
-    <script src="https://mytrip.res.netease.com/pc/gw/20171214191645/js/share_108ddec.js" charset="utf-8"></script> -->
+    <!-- <link href="https://xxx.com" rel="dns-prefetch"> -->
+    <!-- <link href="https://xxx.com/comm/js/nie/util/alertBox/css/alertBox.css" rel="stylesheet" type="text/css" media="all"> -->
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,37 +18,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>feareye正式网站</title>
-    <meta name="keywords" content="feareye, 编程, 程序员, 个人网站, 小站, 小工具">
+    <meta name="keywords" content="feareye, 编程, 程序员, 个人网站, 建网站, 小工具">
     <meta name="description" content="一个专注于技术学习的网站">
 
 
     <link rel="stylesheet" href="references/last.css" type="text/css">
-    <script src="references/last.js" type="text/javascript" charset="utf-8"></script>
     <script src="references/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="references/last.js" type="text/javascript" charset="utf-8"></script>
+    <noscript>
+        <link rel="stylesheet" href="references/noJs.css" type="text/css">
+    </noscript>
 
     <!-- <base href="javascript: ;" /> -->
     <!-- <base target="_blank" /> -->
 
 </head>
 
-<body class="pc_body">
-    <!-- <iframe src="https://baidu.com" frameborder="0" sandbox="allow-scripts"></iframe> -->
-    <!-- <iframe src="https://baidu.com" frameborder="0" sandbox=""></iframe> -->
-    <noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+<body>
+    <!-- <a href="javascript:;" id="noJs" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 51; background-color: rgb(100, 82, 67)">
+        若未跳转请点这里
+    </a> -->
+
     <!--<div id="bg">
         背景方案2
     </div>-->
-    <div id="background" class="pc_background">
+    <div id="background" class="bg1 hide">
+        <!-- <div id="HundredPct" class="Group"> -->
+        <!-- <tr>
+                <td> -->
+
+        <audio id="audio" loop="">
+            <source src="">
+        </audio>
+
+
         <table id="foutyPct">
             <tr id="tr_flow">
                 <td></td>
-                <td id="flow" class="small">
-                    <iframe id="flow1a" src="javascript:;" frameborder="0" scrolling="no"
+                <td id="flow">
+                    <div id="flow1aLeft" class="hide" style="position: absolute;
+                    left: 0px;top: 0px; 
+                    width:100%; height: 1.2rem; 
+                    font-size: 0.875rem;
+                    ">
+                        <div style="width:100%; height: 0.2rem; "></div>
+                        &nbsp;&nbsp;抱歉，你的浏览器不支持javascript
+                    </div>
+
+                    <iframe id="flow1a" src="" frameborder="0" scrolling="no"
                         sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms"></iframe>
                 </td>
                 <td></td>
-                <td rowspan="3" id="menu" class="big">
-                    <div id="menu1a">
+                <td rowspan="3" id="menu">
+                    <!-- <div id="menu1a">
                         <dl>
                             <dt><a href="" title="HTML标签的wrap属性">工具</a></dt>
                             <dt><a href="">源码</a></dt>
@@ -65,7 +79,18 @@
                             <dt><a href="">业余养生</a></dt>
                             <dt><a href="">其他</a></dt>
                         </dl>
+                    </div> -->
+                    <div id="menu1a">
+                        <!-- 23 -->
                     </div>
+                    <dl id="items">
+                        <dt><a href="" title="HTML标签的wrap属性">工具</a></dt>
+                        <dt><a href="">源码</a></dt>
+                        <dt><a href="">素材</a></dt>
+                        <dt><a href="">项目记录</a></dt>
+                        <dt><a href="">业余养生</a></dt>
+                        <dt><a href="">其他</a></dt>
+                    </dl>
                 </td>
                 <td></td>
             </tr>
@@ -78,7 +103,10 @@
             <tr id="tr_mark">
                 <td></td>
                 <td id="mark">
-                    <img id="mark1a" src="javascript:;" alt="">
+                    <img id="skin" src="skins/skin.png" alt="">
+                    <img id="music" src="skins/audio_off.png" alt="">
+                    <!-- <div id="skin">&nbsp;3234</div>
+                    <div id="music"></div> -->
                 </td>
                 <td></td>
                 <td></td>
@@ -86,8 +114,9 @@
             <tr id="tr_textPic1">
                 <td></td>
                 <td rowspan="2" id="textPic">
-                    <img id="textPic1a" src="javascript:;" alt="">
-                    <!-- <div id="textPic1a" style="background-image: http://feareye.github.io/skins/text2.png"> -->
+                    <!-- <img id="textPic1a" src="skins/text2_s.png" alt=""> -->
+                    <!-- <div id="textPic1a" style="background-image: url(skins/text2_s.png); background-size: cover; padding-top: 27%"> -->
+                    <div id="textPic1a" class="phone_textPic1a"></div>
                 </td>
                 <td></td>
                 <td></td>
@@ -95,8 +124,9 @@
             <tr id="tr_textPic2">
                 <td></td>
                 <td id="menuLeft">&nbsp;</td>
-                <td id="menuRight"></td>
-                <td>&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td id="menuRight">&nbsp;&nbsp;</td>
             </tr>
             <tr id="tr_introduce">
                 <td></td>
@@ -114,19 +144,14 @@
         </table>
 
         <table id="restPct">
-            <!-- <col style="width: 1px" />
-            <col style="width: 40%" />
-            <col style="width: 20%" />
-            <col style="width: 40%" />
-            <col style="" /> -->
 
             <tr id="tr_broadcast">
                 <td colspan="5" id="broadcast">
-                    <img src="http://feareye.github.io/skins/broadcast2.png" alt="">
+                    <img src="skins/broadcast2.png" alt="">
                 </td>
             </tr>
             <tr>
-                <td colspan="5" id="belowBroadcast"></td>
+                <td colspan="5" id="belowBroadcast">&nbsp;</td>
             </tr>
             <tr id="tr_content">
                 <!-- <td class="contentGap"></td>
@@ -155,18 +180,18 @@
 
 
                 <td colspan="5" id="content">
-                    <div id="leftContent" class="pc_leftContent">
+                    <div id="leftContent" class="pc_leftContent pre_leftContent">
                         <div id="leftText0">
                             <span id="leftText">
-                                小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈
+                                抱歉，您的浏览器可能不支持javascript，建议您升级浏览器或者换个浏览器试试建议您升级浏览器建议您升级浏览器建议您升级浏览器建议您升级浏览器
                             </span>
                         </div>
 
                     </div>
-                    <div id="rightContent" class="pc_rightContent">
+                    <div id="rightContent" class="pc_rightContent pre_rightContent">
                         <div id="rightText0">
                             <span id="rightText">
-                                小明走在街上，突然另一个小明打晕了他，醒来后，小明不知道哪个小明才是他自己哈哈哈哈哈哈哈哈哈
+                                或者是本站未及时更新数据
                             </span>
                         </div>
 
@@ -188,45 +213,102 @@
                 </td>
                 <td></td>
             </tr> -->
-            <tr>
+            <tr id="tr_belowContent">
+                <td id="firstCol"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="lastCol">&nbsp;</td>
+            </tr>
+            <tr id="tr_today">
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td id="today">
+                    <dl>
+                        <dt>今日动态:</dt>
+                        <dt>-</dt>
+                    </dl>
+                </td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>&nbsp;</td>
             </tr>
         </table>
-        <table id="info" class="smaller">
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="">反馈建议</a>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="">商务合作</a>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="">关于本人</a>
-                </td>
-                <td></td>
-            </tr>
-        </table>
+
+
+
+
+        <!-- </td>
+            </tr> -->
+        <!-- </div> -->
+
+
+
+        <!-- 关于 -->
+        <div id="Info0" class="Group">
+            <table id="info" class="smaller">
+                <tr>
+                    <td>版权相关:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p style="
+                        width: 100%;
+                        /* height: 2.55rem; */
+                        /* line-height: 0.9rem; */
+                        overflow: hidden;
+                        word-break: break-all;
+                        text-overflow: ellipsis;
+                        ">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            BGM：Auld Lang Syne（Arthur Clifton [aka_Philip_Anthony_Corri_1784-1832]）——公共领域音乐网站www.pdmusic.org
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            图片：科技图（KELLEPICS）；月饼图（happycat230）——www.pixabay.com
+                            <hr />
+                        </p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="skins/32532.png" alt=""
+                            style="width: 4rem; height:2.5rem; background-color: lightblue"></td>
+                    <td>反馈建议 - 商务合作 - 联系我 - 友情链接</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="detailInfo" class="hide" style="
+                        word-break: break-all;
+                        width: 100%;
+                        height: 2.7rem;
+                        line-height: 0.9rem;
+
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        ">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            本站用来储存原创作品、记录个人足迹。建立这个网站的过程中走了很多弯路，才算完成一个简单的界面。我遇到过的问题主要有：浏览器兼容性问题、代码执行优先级问题、图片尺寸自适应问题、边距和宽高计算问题、单位换算问题、移动端识别问题、资源懒加载问题。基本上已逐一解决。&nbsp;&nbsp;&nbsp;&nbsp;——2019-09-16
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+
 
 
     </div>

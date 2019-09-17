@@ -7,7 +7,8 @@
 html {
     width: 100%;
     /*height: 101%;*/
-    height: 100%;
+    height: auto;
+    /* height: 766px; */
     font: normal 100% Helvetica, Arial, sans-serif;
     /*font-size:12px;*/
     /* font: normal 87.5% Helvetica, Arial, sans-serif; */
@@ -22,7 +23,8 @@ html {
 
 body {
     width: 100%;
-    height: 100%;
+    height: auto;
+    /* height: auto; */
 
     display: block;
     /* overflow-x: hidden; */
@@ -30,21 +32,21 @@ body {
 
     /* display: none; */
     /* visibility: hidden; */
+    /* 
+    background-size: 100% auto;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-image: url('../skins/bg_1.png'); */
 }
-.hide{
-    /* display: none; */
-}
-.show{
-    /* display: none; */
-    width: 0px;
-    height: 0px;
-    overflow: hidden;
+hr {
+    border-top:1px solid black;
 }
 
 
 a {
     outline: none;
-    color: rgb(0, 0, 155);
+    color: black;
 }
 
 a:focus {
@@ -53,22 +55,74 @@ a:focus {
 
 #background {
     width: 100%;
-    min-height: 400px;
-    height: 100% !important;
-    height: 400px;
+    /* min-height: 400px; */
+    /* height: 100% !important; */
+    height: auto;
+    /* min-height: 800px; */
+    /* height: 200px; */
 
-    background-size: 100% auto;
+    /* background-size: 100% auto; */
     background-position-x: center;
     background-position-y: top;
+    /* background-repeat: no-repeat;
+    background-image: url('../skins/bg_1.png'); */
+
+}
+.bg1{
+    background-size: 100% auto;
+
     background-repeat: no-repeat;
     background-image: url('../skins/bg_1.png');
 }
+.bg2{
+    background-size: 100% auto;
 
+    background-repeat: repeat-y;
+    background-image: url('../skins/bg_2.png');
+}
+.bg3{
+    background-size: auto auto;
 
+    background-repeat: repeat;
+    background-image: url('../skins/wenli.png');
+}
+.bg4{
+    background-size: 100% 100%;
 
+    background-repeat: no-repeat;
+    background-image: url('../skins/bg_4.jpg');
+}
+/* :visited */
+/* #noJs:link{
+    opacity: 1;
+} */
+/* #noJs:link{
+    opacity: 0;
+    z-index: -51;
+    visibility: hidden;
+    display: none;
+} */
+/* #noJs:focus{
+    opacity: 0;
+    z-index: -51;
+    visibility: hidden;
+    display: none;
+} */
+/* #noJs:visited{
+    opacity: 0;
+    z-index: -51;
+    visibility: hidden;
+    display: none;
+}
+#noJs:active{
+    opacity: 0;
+    z-index: -51;
+    visibility: hidden;
+    display: none;
+} */
 
 .big {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .small {
@@ -88,32 +142,39 @@ a:focus {
     height: 40%;
     /* border: solid 1px; */
     /*vertical-align: text-top;*/
+    /* min-height: 700px; */
 }
 
 /* table{
 } */
-table tr td {
-    /* border: solid red 0.1px; */
+table td {
+    /* border: solid white 0.1px; */
     /*vertical-align: top;*/
 }
 
 #flow {
     height: 1.2rem;
-    vertical-align: top;
-
+    vertical-align: bottom;
 }
 
 #flow iframe {
     /* margin-left: 10px;
     margin-top: 10px; */
     /* background-color: blue; */
+    display: inline-block;
+
     margin: 0px;
     padding: 0px;
+    margin-left: 0.5rem;
     /* float: left; */
     /* display: block; */
 
     /* width: auto; */
-    width: 100%;
+    /* width: 100%; */
+    /* margin-left: 0.5rem; */
+
+    width: 80%;
+    width: calc((100% - 0.5rem) * 0.85);
     height: 1.2rem;
     /* width: calc(70%); */
     /* max-width: 60%; */
@@ -132,7 +193,7 @@ table tr td {
     width: auto;
     height: auto;
 
-    min-width: 4.5rem;
+    /* min-width: 4.45rem; */
     /* width: 100%; */
 
     text-align: right;
@@ -142,16 +203,41 @@ table tr td {
     /* margin: 0 0 50% 0; */
 }
 
-#menu1a {
+/* #menu1a {
     height: 0px;
     padding-top: 1rem;
     background-color: blue;
 }
 
-#menu div dl dt a {
+#menu a {
     font-weight: bold;
-    /* color: rgb(0, 0, 155); */
+    
     text-decoration: none;
+
+    color: rgb(0, 0, 145);
+} */
+#menu1a {
+    height: 1.2rem;
+    /* background-color: blue; */
+}
+#items{
+    line-height: 1.5rem;
+}
+
+#menu a {
+    /* font-weight: 590; */
+
+    text-decoration: none;
+
+    color: rgb(20, 20, 40);
+    /* color: rgb(161, 216, 230);
+    color: rgb(89, 195, 226);
+    color: rgb(34, 174, 230);
+    color: rgb(148, 198, 221); 
+    color: rgb(0, 123, 187); */
+    /* color: rgb(64, 100, 255); */
+    /* color: rgb(30, 30, 50); */
+    /* color: rgb(139, 176, 205); */
 }
 
 #menuLeft {
@@ -166,6 +252,7 @@ table tr td {
 #mark {
     width: auto;
     height: auto;
+
     /* height: 20%; */
     /* vertical-align: top; */
     /* vertical-align: bottom; */
@@ -173,10 +260,27 @@ table tr td {
     /* background-color: white; */
 }
 
-#mark img {
-    width: 15%;
-    height: auto;
+#skin,
+#music {
+    width: 1.8rem;
+    height: 1.8rem;
+    float: left;
+    margin-left: 0.5rem;
 }
+
+/* #mark div {
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-left: 0.5rem;
+
+}
+#skin{
+    background-image: 'skins/skin.png';
+}
+#music{
+    background-image: 'skins/48.gif';
+} */
 
 /* #textPic {
     width: 100%;
@@ -198,15 +302,43 @@ table tr td {
     vertical-align: bottom;
 }
 
-#textPic img {
-    /* display: inline-block; */
+/* #textPic img {
     width: 90%;
     height: auto;
+} */
+#textPic1a {
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    /* max-height: 90%; */
+
+    /* background-image: url('../skins/text2_s.png');
+    background-size: cover;
+    padding-top: 26%;
+    background-position-y: bottom; */
+}
+
+.phone_textPic1a {
+    background-image: url('../skins/text2_s.png');
+    background-size: cover;
+    /* background-size: 100% 100%; */
+    padding-top: 26%;
+    /* padding-top: 27%; */
+    background-position-y: bottom;
+}
+
+.pc_textPic1a {
+    background-image: url('../skins/text2.png');
+    background-size: cover;
+    padding-top: 19.5%;
+    background-position-y: bottom;
 }
 
 #introduce1a {
     width: 100%;
     height: auto;
+
+    color: rgb(20, 20, 40);
     /* width: 100%; */
     /* white-space: nowrap; */
     /* overflow: hidden; */
@@ -215,23 +347,21 @@ table tr td {
 /* #textPic td{
     height: 270%;
 } */
+/* ———————————————————————————————————————————————————————————— */
 #tr_flow {
     /* height: 1.2rem; */
     /* height: 0.1%; */
     /* text-align: left; */
     /* line-height: 1.2rem; */
+    /* vertical-align: bottom; */
 }
 
-#tr_belowFlow {
-    /*padding-bottom: 100px;*/
-    height: 5%;
-    /* height: 1rem; */
-}
 
 #tr_mark {
-    height: 20%;
+    /* height: 20%; */
     /*min-height:2rem;*/
     /* vertical-align: bottom; */
+    height: 2rem;
 }
 
 /* #menu {
@@ -240,11 +370,13 @@ table tr td {
 #tr_textPic1 {
     /* width: 30%; */
     /* height: 100%; */
+    height: 5rem;
 }
 
 #tr_textPic2 {
     /* width: 100%; */
     /* height:100%; */
+    /* height: 20%; */
 }
 
 #tr_introduce {
@@ -254,17 +386,20 @@ table tr td {
 #introduce {
     /* width: 100%; */
     width: auto;
-    height: auto;
+    /* height: auto; */
+    /* height: 100%; */
     text-align: right;
     vertical-align: top;
 
     /* max-width: 100%; */
 }
 
+/* ———————————————————————————————————————————————————————————— */
+
 #introduce1a {
-    max-height: 16px;
+    height: 1rem;
     display: inline-block;
-    line-height: 16px;
+    line-height: 1rem;
     /* vertical-align: bottom; */
     overflow: hidden;
     word-break: break-all;
@@ -300,9 +435,13 @@ table tr td {
     /*background-color: blue;*/
     /* min-height: 40%; */
     /* height: 10px; */
-    height: 40%;
+    /* height: 40%; */
 
 }
+
+/* #tr_content + tr{
+    min-height: 100px;
+} */
 
 /* phone discarded*/
 /* #leftContent0,
@@ -327,13 +466,28 @@ table tr td {
 
     /* background-color: black; */
 
-    /* max-height: 40px; */
-    height: 40px;
-    display: inline-block;
-    line-height: 20px;
-    /* vertical-align: bottom; */
+    width: 96%;
+    height: 2.45rem;
+    /* display: inline-block; */
+    line-height: 1.25rem;
     overflow: hidden;
-    word-break: break-all;
+    /* word-break: break-all; */
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    background-color: rgba(230, 230, 230, 0.5);
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    /* padding-bottom: 1%; */
+    /* padding: 1%; */
+
+    color: rgb(20, 20, 40);
+    font-size: 0.9rem;
 }
 
 #leftText0,
@@ -352,6 +506,9 @@ table tr td {
 
     position: relative;
 
+    /* left: 2%; */
+    /* bottom: 0.3rem; */
+
     /* background-color: white; */
 
     /* height: 0px;
@@ -366,26 +523,34 @@ table tr td {
 
 #leftContent,
 #rightContent {
+    /* border: solid red 1px; */
     border-radius: 0.2rem;
 
-    text-align: center;
+    text-align: left;
 
-    position: absolute;
-    
 
     display: inline-block;
 
+    /* height: 100%; */
+    /* opacity: 0.8; */
 }
 
 .phone_leftContent,
 .phone_rightContent {
+    position: absolute;
 
     max-width: 90%;
+
+    padding-top: 0px;
+
+    /* 清除默认 */
+    margin: 0px;
 }
+
 .phone_leftContent {
     left: 6%;
     z-index: 2;
-    
+
     bottom: 0px;
 }
 
@@ -398,14 +563,23 @@ table tr td {
 
 .pc_leftContent,
 .pc_rightContent {
-    /* position: absolute; */
+    position: absolute;
+
     bottom: 0px;
     max-width: 85%;
+
+    padding-top: 0px;
+
+    /* 清除默认 */
+    margin: 0px;
 }
 
 .pc_leftContent {
     left: 15%;
     z-index: 2;
+
+    /* left: calc((100% - 500px) / 2); */
+    /* left: -15%; */
 }
 
 .pc_rightContent {
@@ -413,32 +587,50 @@ table tr td {
     z-index: 1;
 }
 
+/* 就近原则，必须放在pc后才能生效 */
+.pre_leftContent,
+.pre_rightContent {
+    position: static;
+
+    /* padding-top: 6rem; */
+    /* height: 6rem; */
+    height: 100%;
+
+    width: 33%;
+    width: 40vmin;
+}
+
+.pre_leftContent {
+    margin-right: 10%;
+    margin-right: 5vmin;
+    margin-right: calc((100% - 80vmin) / 3.3);
+}
+
 /* pc */
 #content {
     width: 100%;
-    height: 40%;
+    /* height: 40%; */
     position: relative;
     /* background-color: blue; */
-}
+
+    font-size: 1rem;
+
+    text-align: center;
 
 
+    height: 6.5rem;
+    height: 27vmin;
 
-#betweenContent {
-    /* padding-right: 100%; */
-    /* display: inline-block; */
-    /* width: calc(0px + 3%); */
-    /* padding-right: -10%; */
-}
-
-.contentGap {
-    width: 1%;
-    /* width: auto; */
 }
 
 #leftContent {
     /* margin-right: -50%; */
-
-    background-color: rgba(0, 255, 0, 0.5);
+    /* background-color: rgb(135,206,235); */
+    background-color: rgb(225, 225, 205);
+    /* background-color: rgba(135,206,235, 0.9); */
+    /* background-color: green; */
+    background-image: url('../skins/KELLEPICS-Pixabay.jpg');
+    background-size: auto 100%;
 }
 
 #rightContent {
@@ -450,13 +642,55 @@ table tr td {
     height: auto; */
     /* margin-right: calc(50% + 100px); */
     /*padding-top:50%;*/
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgb(205, 225, 225);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background-image: url('../skins/happycat230-Pixabaya.jpg');
+    background-size: 100% 100%;
+}
 
+#today {
+    text-align: right;
+    padding-right: 0.5rem;
 }
 
 #info {
-    width: 90%;
-    height: auto;
+    width: 70%;
+    /* height: 9rem; */
+    /* height: auto; */
     margin: 0 auto;
-    /*background-color: blue;*/
+
+    color: rgb(20, 20, 40);
+}
+
+#Info0 {
+    /* background-color: rgb(53, 67, 121); */
+    background-color: rgb(205, 205, 205);
+    background-color: rgba(205, 205, 205, 0.8);
+}
+
+.hide {
+    display: none;
+}
+
+.showBlock {
+    display: block;
+}
+
+@media screen and (min-width: 30rem) {
+    #textPic1a {
+        background-image: url('../skins/text2.png');
+        background-size: cover;
+        padding-top: 19.5%;
+        background-position-y: bottom;
+    }
+
+}
+@media screen and (max-width: 30rem) {
+    #textPic1a {
+        background-image: url('../skins/text2_s.png');
+        background-size: cover;
+        padding-top: 26%;/*30%*/
+        background-position-y: bottom;
+    }
+
 }

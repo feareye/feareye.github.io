@@ -25,19 +25,17 @@
             font: normal 100% Helvetica, Arial, sans-serif;
         }
 
-        body {
-            /* background-color: blue; */
-            font-size: 0.875rem;
-        }
-
         a {
             /* margin-left: 1%; */
             /* width: auto;
             height: auto;
             float: left; */
             outline: none;
-            color: black;
+            /* color: black; */
+            color: rgb(20, 20, 40);
+            text-decoration: none;
 
+            font-size: 0.875rem;
         }
 
 
@@ -48,6 +46,42 @@
     </style>
 
     <script type="text/javascript">
+
+        wscreen = window.screen.width;
+        hscreen = window.screen.height;
+        vhtml = document.getElementsByTagName("html")[0];
+        // 移动端备用字体(0.875~1)方案
+        var isPhone1 = navigator.userAgent.match(
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone|webOS)/i
+        );
+        var isPhone2 = navigator.userAgent.toLowerCase().match(
+            /(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince|mobile)/i);
+        var isOtherPhone = (wscreen < hscreen) && (wscreen < 650);
+        var isUnknownPhone = (hscreen < 450) || (wscreen < 450);
+        if (isPhone1 || isPhone2 || isOtherPhone || isUnknownPhone) {
+            // if (1) {
+
+            if (wscreen > hscreen) {
+                var preWscreen = wscreen;
+                wscreen = hscreen;
+                hscreen = preWscreen;
+            }
+
+
+            if (wscreen < 300) {
+                vhtml.style.fontSize = "0.85rem";
+            } else
+                if (wscreen < 980) {
+                    vhtml.style.fontSize = ((wscreen - 300) / 4500 + 0.85) + "rem";
+                    // vhtml.style.fontSize = (0 + 0.85) + "rem";
+                    alert(hscreen + ", frame已为您调整合适的字体大小");
+                }
+        }
+
+
+
+
+
         var shownPieces = [""];
         var index = 0;
         var flow = undefined;
@@ -81,7 +115,8 @@
 </head>
 
 <body onload="startFlow()">
-    <!-- <a id="flow" href="dailyPieces/index.html" target="_top"><span></span></a> -->
+    <!-- <noscript style="font-size: 0.875rem;">抱歉，你的浏览器不支持 JavaScript!</noscript> -->
+    
     <a id="flow" href="dailyPieces/index.html" target="_top"></a>
     <!-- <a id="flow" href="" target="_top">qwerqwrqw</a> -->
 </body>
