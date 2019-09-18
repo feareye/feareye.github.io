@@ -26,6 +26,7 @@ window.onload = function () {
 
     initStyles();
     initLinks();
+    initEvents();
     UIReady();
 }
 
@@ -250,26 +251,29 @@ var initLinks = function () {
     // vflow1a.src.src='http://www.sohu.com';
     // vflow1a.src='http://feareye.github.io/flow.html';
 
-    vskin.src = root + 'skins/skin.png';
+    // 
+    vskin.src = 'skins/skin.png';
     vmusic.src = "skins/audio_off.png";
     // alert("initLinks");
 
     if (isPC == 1) {
         vtextPic1a.src = root + 'skins/text2.png';
     } else {
-        vtextPic1a.src = root + "skins/text2_s.png";
+        vtextPic1a.src = root + "skins/text2_s_c.png";
     }
     // vflow1a.src ='mainUI/flow.html';
 }
 
 
-var delayEvent = function () {
+var DelayEvent = function () {
     vflow1a.src = 'mainUI/flow.html';
     vaudio.src = "medias/AuldLangSyne.mp3";
     if (isPC) {
         vmusic.click();
     }
 }
+
+// =================================================
 var initEvents = function () {
     vskin.onclick = function() {
         // curIndex = curIndex + 1 - 4 * Boolean(curIndex-2);
@@ -324,8 +328,8 @@ var UIReady = function () {
     }
 
 
-    initEvents();
-    vbackground.className = "bg1";
+    // initEvents();
+    vbackground.className = "bg1 showBlock";
 
-    delayEvent();
+    DelayEvent();
 }

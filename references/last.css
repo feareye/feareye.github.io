@@ -72,25 +72,25 @@ a:focus {
     background-size: 100% auto;
 
     background-repeat: no-repeat;
-    background-image: url('../skins/bg_1.png');
+    background-image: url('../skins/bg_1_c.jpg');
 }
 .bg2{
     background-size: 100% auto;
 
     background-repeat: repeat-y;
-    background-image: url('../skins/bg_2.png');
+    background-image: url('../skins/bg_2_c.png');
 }
 .bg3{
     background-size: auto auto;
 
     background-repeat: repeat;
-    background-image: url('../skins/wenli.png');
+    background-image: url('../skins/bg_3_c.jpg');
 }
 .bg4{
     background-size: 100% 100%;
 
     background-repeat: no-repeat;
-    background-image: url('../skins/bg_4.jpg');
+    background-image: url('../skins/bg_4_c.jpg');
 }
 /* :visited */
 /* #noJs:link{
@@ -319,7 +319,7 @@ table td {
 }
 
 .phone_textPic1a {
-    background-image: url('../skins/text2_s.png');
+    background-image: url('../skins/text2_s_c.png');
     background-size: cover;
     /* background-size: 100% 100%; */
     padding-top: 26%;
@@ -687,7 +687,7 @@ table td {
 }
 @media screen and (max-width: 30rem) {
     #textPic1a {
-        background-image: url('../skins/text2_s.png');
+        background-image: url('../skins/text2_s_c.png');
         background-size: cover;
         padding-top: 26%;/*30%*/
         background-position-y: bottom;
