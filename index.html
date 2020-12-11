@@ -1,4 +1,4 @@
-﻿<!-- <!DOCTYPE html> -->
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 
 <head>
@@ -28,6 +28,29 @@
     <noscript>
         <link rel="stylesheet" href="references/noJs.css" type="text/css">
     </noscript>
+
+    <script>
+
+//定义的方法
+     function openVideo(src) {
+         alert(1234);
+          var page = window.open();
+
+          var html="<body style='background:black'>
+
+                 <div style='width:80%;margin:auto;'>
+
+                 <video controls width='100%' autoplay src='"+src+ "'></video> 
+
+                 </div>
+
+                </body>"
+
+          page.document.write(html);
+
+     }
+
+        </script>
 
     <!-- <base href="javascript: ;" /> -->
     <!-- <base target="_blank" /> -->
@@ -147,7 +170,7 @@
 
             <tr id="tr_broadcast">
                 <td colspan="5" id="broadcast">
-                    <img src="skins/broadcast2.png" alt="">
+                    <a href="m.html" alt="" style="display: inline-block;background-image: url(skins/broadcast2.png);width: 63px;height: 63px;" />
                 </td>
             </tr>
             <tr>
